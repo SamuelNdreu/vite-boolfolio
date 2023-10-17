@@ -61,8 +61,12 @@
 <template>
 
 <section class="row">
-    <button @click="prevPage()" class="col-6">prev</button>
-    <button @click="nextPage()" class="col-6">next</button>
+    <div class="col-12 py-3 d-flex justify-content-between">
+      <button @click="prevPage()" class="btn btn-primary ms-5">prev</button>
+      <button @click="nextPage()" class="btn btn-primary me-5">next</button>
+
+    </div>
+
   <article class="card mb-3 col-4" v-for="project in projects">
     <ProjectCard :project="project"/>
   </article>
